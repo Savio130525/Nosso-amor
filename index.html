@@ -1,65 +1,156 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Eu te amo muito! ❤️</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eu Te Amo Muito!</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: white;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        
+        h1 {
+            color: #D50000;
+            font-size: 3em;
+            margin-top: 20px;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column; /* Faz as imagens ficarem uma abaixo da outra */
+            align-items: center;
+            padding: 20px;
+        }
+
+        .photo {
+            width: 250px; /* Tamanho das fotos */
+            height: 250px; /* Tamanho das fotos */
+            margin: 10px;
+            border-radius: 15px;
+            transition: transform 0.3s ease; /* Efeito de transição para a rotação */
+        }
+
+        .photo:hover {
+            transform: rotateY(180deg); /* Efeito de virar a foto */
+        }
+
+        .text {
+            display: none; /* Esconde o texto inicialmente */
+            position: absolute;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 15px;
+            border-radius: 8px;
+            width: 70%;
+            margin-top: 10px;
+            text-align: justify;
+            font-family: 'Times New Roman', serif;
+            font-size: 1.2em;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .photo-container {
+            position: relative;
+            display: inline-block;
+        }
+
+        .photo-container:hover .text {
+            display: block; /* Exibe o texto quando a imagem for clicada ou estiver com o hover */
+        }
+
+        .photo-container:hover .photo {
+            transform: rotateY(180deg); /* Gira a imagem ao passar o mouse */
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
+
     <h1>Eu te amo muito! ❤️</h1>
 
-    <!-- Imagens com texto oculto ao clicar -->
-    <div class="imagens-container">
-      <div class="imagem" onclick="mostrarTexto(1)">
-        <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto1.jpg" alt="Foto 1">
-        <div class="texto" id="texto1">Texto da imagem 1, que você pode adicionar depois!</div>
-      </div>
-      <div class="imagem" onclick="mostrarTexto(2)">
-        <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto2.jpg" alt="Foto 2">
-        <div class="texto" id="texto2">Texto da imagem 2, que você pode adicionar depois!</div>
-      </div>
-      <div class="imagem" onclick="mostrarTexto(3)">
-        <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto3.jpg" alt="Foto 3">
-        <div class="texto" id="texto3">Texto da imagem 3, que você pode adicionar depois!</div>
-      </div>
-      <div class="imagem" onclick="mostrarTexto(4)">
-        <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto4.jpg" alt="Foto 4">
-        <div class="texto" id="texto4">Texto da imagem 4, que você pode adicionar depois!</div>
-      </div>
-      <div class="imagem" onclick="mostrarTexto(5)">
-        <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto5.jpg" alt="Foto 5">
-        <div class="texto" id="texto5">Texto da imagem 5, que você pode adicionar depois!</div>
-      </div>
-      <div class="imagem" onclick="mostrarTexto(6)">
-        <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto6.jpg" alt="Foto 6">
-        <div class="texto" id="texto6">Texto da imagem 6, que você pode adicionar depois!</div>
-      </div>
-      <div class="imagem" onclick="mostrarTexto(7)">
-        <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto7.jpg" alt="Foto 7">
-        <div class="texto" id="texto7">Texto da imagem 7, que você pode adicionar depois!</div>
-      </div>
-      <div class="imagem" onclick="mostrarTexto(8)">
-        <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto8.jpg" alt="Foto 8">
-        <div class="texto" id="texto8">Texto da imagem 8, que você pode adicionar depois!</div>
-      </div>
-      <div class="imagem" onclick="mostrarTexto(9)">
-        <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto9.jpg" alt="Foto 9">
-        <div class="texto" id="texto9">Texto da imagem 9, que você pode adicionar depois!</div>
-      </div>
-      <div class="imagem" onclick="mostrarTexto(10)">
-        <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto10.jpg" alt="Foto 10">
-        <div class="texto" id="texto10">Texto da imagem 10, que você pode adicionar depois!</div>
-      </div>
-    </div>
-  </div>
+    <div class="container">
+        <!-- Exemplo de foto 1 -->
+        <div class="photo-container">
+            <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto1.jpg" alt="Foto 1" class="photo">
+            <div class="text">
+                Aqui você pode colocar a letra de uma música ou uma mensagem especial!
+            </div>
+        </div>
 
-  <script>
-    function mostrarTexto(num) {
-      var texto = document.getElementById('texto' + num);
-      texto.classList.toggle('visivel');
-    }
-  </script>
+        <!-- Exemplo de foto 2 -->
+        <div class="photo-container">
+            <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto2.jpg" alt="Foto 2" class="photo">
+            <div class="text">
+                Texto que aparece ao clicar na foto ou ao passar o mouse sobre ela.
+            </div>
+        </div>
+
+        <!-- Exemplo de foto 3 -->
+        <div class="photo-container">
+            <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto3.jpg" alt="Foto 3" class="photo">
+            <div class="text">
+                Aqui você pode escrever o que quiser, como uma frase romântica.
+            </div>
+        </div>
+
+        <!-- Exemplo de foto 4 -->
+        <div class="photo-container">
+            <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto4.jpg" alt="Foto 4" class="photo">
+            <div class="text">
+                Abaixo está a descrição da foto ou mais letras de músicas que você quiser!
+            </div>
+        </div>
+
+        <!-- Exemplo de foto 5 -->
+        <div class="photo-container">
+            <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto5.jpg" alt="Foto 5" class="photo">
+            <div class="text">
+                Continue colocando suas mensagens ou letras favoritas aqui!
+            </div>
+        </div>
+
+        <!-- Exemplo de foto 6 -->
+        <div class="photo-container">
+            <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto6.jpg" alt="Foto 6" class="photo">
+            <div class="text">
+                Você pode adicionar qualquer coisa aqui, seja uma letra ou um pensamento.
+            </div>
+        </div>
+
+        <!-- Exemplo de foto 7 -->
+        <div class="photo-container">
+            <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto7.jpg" alt="Foto 7" class="photo">
+            <div class="text">
+                Aqui vai mais uma mensagem ou música que você ama!
+            </div>
+        </div>
+
+        <!-- Exemplo de foto 8 -->
+        <div class="photo-container">
+            <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto8.jpg" alt="Foto 8" class="photo">
+            <div class="text">
+                Coloque suas letras favoritas ou uma mensagem cheia de amor!
+            </div>
+        </div>
+
+        <!-- Exemplo de foto 9 -->
+        <div class="photo-container">
+            <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto9.jpg" alt="Foto 9" class="photo">
+            <div class="text">
+                Mais um espaço para você colocar o que desejar.
+            </div>
+        </div>
+
+        <!-- Exemplo de foto 10 -->
+        <div class="photo-container">
+            <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto10.jpg" alt="Foto 10" class="photo">
+            <div class="text">
+                Escreva algo que toque o coração, como uma música especial.
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>
