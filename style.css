@@ -20,32 +20,37 @@ h1 {
 /* Estilo para as imagens e texto oculto */
 .imagens-container {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
 }
 
 .imagem {
   position: relative;
-  width: 250px;
-  height: 250px;
+  width: 260px;
+  height: 260px;
 }
 
 .imagem img {
   width: 100%;
   height: 100%;
+  object-fit: contain; /* Evita corte nas imagens */
   border-radius: 10px;
+  opacity: 0.85;
+  background-color: #fff; /* Preenche borda em imagens menores */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: block;
 }
 
+/* Texto que aparece ao tocar/clicar */
 .texto {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.6);
-  color: white;
+  background: url('https://i.imgur.com/OH4FQ6n.png') center/cover no-repeat; /* Efeito folha antiga */
+  color: #4B2E19;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -55,6 +60,8 @@ h1 {
   padding: 20px;
   box-sizing: border-box;
   text-align: center;
+  font-weight: bold;
+  font-family: 'Georgia', serif;
 }
 
 .texto.visivel {
