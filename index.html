@@ -16,7 +16,8 @@
 
     /* Estilo do texto grande com efeito de folha antiga */
     .texto-grande {
-      font-size: 20px;
+      font-size: 24px; /* Aumenta o tamanho da fonte */
+      font-weight: bold; /* Deixa o texto mais "gordinho" */
       text-align: justify;
       margin-top: 20px;
       margin-bottom: 20px;
@@ -50,22 +51,35 @@
       max-width: 800px;
     }
 
+    /* Para garantir que as imagens fiquem à esquerda e o texto à direita */
+    .imagem-texto .imagem {
+      order: 1; /* A imagem ficará à esquerda */
+    }
+
     /* Para garantir que as imagens fiquem em linha, mas ajustadas ao celular */
     @media (max-width: 768px) {
       .imagem-texto {
-        flex-direction: column;
+        flex-direction: row-reverse; /* No celular, as imagens ficam à esquerda e o texto à direita */
         align-items: center;
       }
 
       .imagem {
         width: 80%; /* Ajuste da largura das imagens no celular */
       }
+
+      .texto-musica {
+        font-size: 18px;
+        margin-left: 10px;
+      }
     }
 
     /* Estilo do texto da música */
     .texto-musica {
       margin-left: 20px;
-      font-size: 18px;
+      font-size: 20px;
+      font-weight: normal;
+      color: #333;
+      line-height: 1.5;
     }
 
     h1 {
