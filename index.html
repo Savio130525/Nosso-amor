@@ -1,172 +1,124 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eu Te Amo Muito!</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: white;
-            text-align: center;
-            margin: 0;
-            padding: 0;
-        }
-        
-        h1 {
-            color: #D50000;
-            font-size: 3em;
-            margin-top: 20px;
-        }
+  <meta charset="UTF-8">
+  <title>Eu te amo muito ❤️</title>
+  <style>
+    body {
+      background-color: white;
+      font-family: 'Georgia', serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
 
-        .container {
-            display: flex;
-            flex-direction: column; /* Faz as imagens ficarem uma abaixo da outra */
-            align-items: center;
-            padding: 20px;
-        }
+    h1 {
+      font-size: 36px;
+      margin-bottom: 40px;
+      font-weight: bold;
+    }
 
-        .photo-container {
-            position: relative;
-            margin: 10px;
-            width: 300px; /* Tamanho das imagens ajustado */
-            height: 400px; /* Tamanho das imagens ajustado */
-        }
+    .card-container {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      width: 90%;
+      max-width: 500px;
+    }
 
-        .photo {
-            width: 100%;
-            height: 100%;
-            border-radius: 15px;
-            object-fit: cover;
-            transition: transform 0.3s ease-in-out;
-        }
+    .card {
+      width: 100%;
+      height: 300px;
+      perspective: 1000px;
+    }
 
-        .text {
-            display: none; /* Esconde o texto inicialmente */
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: rgba(255, 255, 255, 0.9);
-            padding: 15px;
-            border-radius: 8px;
-            width: 80%;
-            text-align: justify;
-            font-family: 'Times New Roman', serif;
-            font-size: 1.2em;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-            z-index: 2; /* Garante que o texto ficará acima da "folha antiga" */
-        }
+    .card-inner {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      transform-style: preserve-3d;
+      transition: transform 1s;
+      cursor: pointer;
+    }
 
-        .photo-container:hover .text {
-            display: block; /* Exibe o texto quando a imagem for clicada ou estiver com o hover */
-        }
+    .card.flipped .card-inner {
+      transform: rotateY(180deg);
+    }
 
-        /* Efeito de mostrar a parte de trás da imagem */
-        .photo-container:hover .photo {
-            opacity: 0.5; /* A foto fica semitransparente */
-        }
+    .card-front, .card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+      backface-visibility: hidden;
+    }
 
-        /* Folha antiga atrás do texto */
-        .text::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: #f4e1c1; /* Cor amarelada para imitar uma folha envelhecida */
-            border-radius: 8px;
-            z-index: -1; /* Coloca a "folha" atrás do texto */
-        }
-        
-    </style>
+    .card-front img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.85;
+      border-radius: 10px;
+    }
+
+    .card-back {
+      background: url('https://cdn.pixabay.com/photo/2016/11/29/01/15/old-paper-1869567_1280.jpg') center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      transform: rotateY(180deg);
+      font-size: 16px;
+      text-align: justify;
+      font-weight: bold;
+      color: #2c2c2c;
+    }
+  </style>
 </head>
 <body>
-
-    <h1>Eu te amo muito! ❤️</h1>
-
-    <div class="container">
-        <!-- Exemplo de foto 1 -->
-        <div class="photo-container">
-            <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto1.jpg" alt="Foto 1" class="photo">
-            <div class="text">
-                Aqui você pode colocar a letra de uma música ou uma mensagem especial!
-            </div>
+  <h1>Eu te amo muito! ❤️</h1>
+  <div class="card-container">
+    <!-- Repetindo o bloco abaixo para cada imagem -->
+    <div class="card" onclick="this.classList.toggle('flipped')">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto1.jpg" alt="Foto 1">
         </div>
-
-        <!-- Exemplo de foto 2 -->
-        <div class="photo-container">
-            <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto2.jpg" alt="Foto 2" class="photo">
-            <div class="text">
-                Texto que aparece ao clicar na foto ou ao passar o mouse sobre ela.
-            </div>
+        <div class="card-back">
+          Texto 1 aqui
         </div>
-
-        <!-- Exemplo de foto 3 -->
-        <div class="photo-container">
-            <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto3.jpg" alt="Foto 3" class="photo">
-            <div class="text">
-                Aqui você pode escrever o que quiser, como uma frase romântica.
-            </div>
-        </div>
-
-        <!-- Exemplo de foto 4 -->
-        <div class="photo-container">
-            <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto4.jpg" alt="Foto 4" class="photo">
-            <div class="text">
-                Abaixo está a descrição da foto ou mais letras de músicas que você quiser!
-            </div>
-        </div>
-
-        <!-- Exemplo de foto 5 -->
-        <div class="photo-container">
-            <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto5.jpg" alt="Foto 5" class="photo">
-            <div class="text">
-                Continue colocando suas mensagens ou letras favoritas aqui!
-            </div>
-        </div>
-
-        <!-- Exemplo de foto 6 -->
-        <div class="photo-container">
-            <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto6.jpg" alt="Foto 6" class="photo">
-            <div class="text">
-                Você pode adicionar qualquer coisa aqui, seja uma letra ou um pensamento.
-            </div>
-        </div>
-
-        <!-- Exemplo de foto 7 -->
-        <div class="photo-container">
-            <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto7.jpg" alt="Foto 7" class="photo">
-            <div class="text">
-                Aqui vai mais uma mensagem ou música que você ama!
-            </div>
-        </div>
-
-        <!-- Exemplo de foto 8 -->
-        <div class="photo-container">
-            <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto8.jpg" alt="Foto 8" class="photo">
-            <div class="text">
-                Coloque suas letras favoritas ou uma mensagem cheia de amor!
-            </div>
-        </div>
-
-        <!-- Exemplo de foto 9 -->
-        <div class="photo-container">
-            <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto9.jpg" alt="Foto 9" class="photo">
-            <div class="text">
-                Mais um espaço para você colocar o que desejar.
-            </div>
-        </div>
-
-        <!-- Exemplo de foto 10 -->
-        <div class="photo-container">
-            <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto10.jpg" alt="Foto 10" class="photo">
-            <div class="text">
-                Escreva algo que toque o coração, como uma música especial.
-            </div>
-        </div>
+      </div>
     </div>
 
+    <div class="card" onclick="this.classList.toggle('flipped')">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto2.jpg" alt="Foto 2">
+        </div>
+        <div class="card-back">
+          Texto 2 aqui
+        </div>
+      </div>
+    </div>
+
+    <!-- Copie e altere esse bloco para as outras fotos até foto10.jpg -->
+    <div class="card" onclick="this.classList.toggle('flipped')">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto3.jpg" alt="Foto 3">
+        </div>
+        <div class="card-back">
+          Texto 3 aqui
+        </div>
+      </div>
+    </div>
+
+    <!-- Continue até foto10.jpg... -->
+  </div>
+
+  <script>
+    // Se quiser ativar/desativar por clique em mobile, está pronto!
+  </script>
 </body>
 </html>
