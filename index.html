@@ -26,44 +26,46 @@
             padding: 20px;
         }
 
-        .photo {
-            width: 250px; /* Tamanho das fotos */
-            height: 250px; /* Tamanho das fotos */
+        .photo-container {
+            position: relative;
             margin: 10px;
-            border-radius: 15px;
-            transition: transform 0.3s ease; /* Efeito de transição para a rotação */
+            width: 300px; /* Tamanho das imagens ajustado */
+            height: 400px; /* Tamanho das imagens ajustado */
         }
 
-        .photo:hover {
-            transform: rotateY(180deg); /* Efeito de virar a foto */
+        .photo {
+            width: 100%;
+            height: 100%;
+            border-radius: 15px;
+            object-fit: cover;
+            transition: transform 0.3s ease-in-out;
         }
 
         .text {
             display: none; /* Esconde o texto inicialmente */
             position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
             background-color: rgba(255, 255, 255, 0.9);
             padding: 15px;
             border-radius: 8px;
-            width: 70%;
-            margin-top: 10px;
+            width: 80%;
             text-align: justify;
             font-family: 'Times New Roman', serif;
             font-size: 1.2em;
             box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
         }
 
-        .photo-container {
-            position: relative;
-            display: inline-block;
-        }
-
         .photo-container:hover .text {
             display: block; /* Exibe o texto quando a imagem for clicada ou estiver com o hover */
         }
 
+        /* Efeito de mostrar a parte de trás da imagem */
         .photo-container:hover .photo {
-            transform: rotateY(180deg); /* Gira a imagem ao passar o mouse */
+            opacity: 0.5; /* A foto fica semitransparente */
         }
+        
     </style>
 </head>
 <body>
