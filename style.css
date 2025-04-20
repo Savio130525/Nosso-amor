@@ -1,9 +1,9 @@
 /* Estilo básico da página */
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: 'Georgia', serif;
   margin: 0;
   padding: 0;
-  background-color: #f5f5f5;
+  background-color: #ffffff;
 }
 
 .container {
@@ -22,48 +22,50 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 25px;
+  gap: 20px;
+  padding: 0 10px 40px;
 }
 
 .imagem {
   position: relative;
-  width: 260px;
-  height: 260px;
+  width: 280px;
+  height: auto;
+  cursor: pointer;
 }
 
 .imagem img {
   width: 100%;
-  height: 100%;
-  object-fit: contain; /* Evita corte nas imagens */
+  height: auto;
   border-radius: 10px;
-  opacity: 0.85;
-  background-color: #fff; /* Preenche borda em imagens menores */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  display: block;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
 }
 
-/* Texto que aparece ao tocar/clicar */
+/* Texto sobreposto com opacidade + folha antiga */
 .texto {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: url('https://i.imgur.com/OH4FQ6n.png') center/cover no-repeat; /* Efeito folha antiga */
-  color: #4B2E19;
+  background-image: url('folha-antiga.png'); /* use uma imagem estilo "folha antiga" */
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #3e2c1e;
   display: flex;
   align-items: center;
   justify-content: center;
   opacity: 0;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.5s ease;
   border-radius: 10px;
   padding: 20px;
   box-sizing: border-box;
   text-align: center;
   font-weight: bold;
-  font-family: 'Georgia', serif;
+  font-size: 16px;
+  line-height: 1.4;
 }
 
 .texto.visivel {
-  opacity: 1;
+  opacity: 0.95;
 }
