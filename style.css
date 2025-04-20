@@ -57,10 +57,6 @@ h1 {
   text-align: center;
 }
 
-.texto.oculto {
-  opacity: 0;
-}
-
-.texto:not(.oculto) {
+.texto.visivel {
   opacity: 1;
 }
