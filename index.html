@@ -8,32 +8,8 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-    }
-
-    /* Estilo do Accordion */
-    .accordion {
-      background-color: #f1f1f1;
-      color: #444;
-      cursor: pointer;
-      padding: 10px;
-      width: 100%;
-      border: none;
-      text-align: left;
-      outline: none;
-      font-size: 16px;
-      transition: background-color 0.3s ease;
-    }
-
-    .active, .accordion:hover {
-      background-color: #ddd;
-    }
-
-    .panel {
-      padding: 0 18px;
-      display: none;
-      overflow: hidden;
-      background-color: #f9f9f9;
-      margin-bottom: 10px;
+      background-color: #FF0000; /* Cor de fundo vermelha */
+      color: white; /* Texto branco para contrastar */
     }
 
     /* Estilo do texto grande */
@@ -45,12 +21,14 @@
       padding: 20px;
       border-radius: 10px;
       background-color: #f9f9f9;
+      color: #333; /* Cor do texto normal */
     }
 
-    /* Estilo da imagem */
+    /* Estilo das imagens */
     .imagem {
-      width: 150px;
+      width: 100%;
       height: auto;
+      max-width: 250px; /* Limita o tamanho máximo das imagens */
       margin-right: 20px;
       border-radius: 8px;
     }
@@ -62,6 +40,18 @@
       margin-bottom: 20px;
     }
 
+    /* Para garantir que as imagens fiquem em linha, mas ajustadas ao celular */
+    @media (max-width: 768px) {
+      .imagem-texto {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .imagem {
+        width: 80%; /* Ajuste da largura das imagens no celular */
+      }
+    }
+
   </style>
 </head>
 <body>
@@ -69,51 +59,69 @@
     <h1>Para o amor da minha vida❤️</h1>
 
     <div class="texto-grande">
-      <p>Amor, eu sou o homem mais apaixonado do mundo. Não consigo mais parar de pensar em você...</p>
+      <p>Amor, eu sou o homem mais apaixonado do mundo. Não consigo mais parar de pensar em você. Você virou a trilha sonora da minha vida, trouxe suas cores pro meu mundo, e agora vejo você em todos os lugares. Me imagino com você em cada canto, em cada sonho, em cada plano. Viver a vida ao seu lado foi a melhor escolha que eu já fiz, e vou continuar fazendo essa escolha todos os dias. Vou me casar com você, viver os momentos felizes, os difíceis, todos, sempre ao seu lado. Pode até parecer que sou emocionado demais… mas é que perto de você, é impossível não ser. Durmo pensando em você, acordo com você na mente. Você entrou no meu coração de um jeito que não tem volta, e eu não quero que tenha. Eu não quero só um final feliz com você. Eu quero todos os capítulos. Cada abraço, cada beijo, cada conquista, cada madrugada em claro só conversando ou sonhando juntos. Você é o meu amor, o meu presente e o meu futuro. Eu te amo Ana Alice!</p>
     </div>
 
-    <!-- Accordion para as letras das músicas -->
-    <button class="accordion">Letra da Música 1</button>
-    <div class="panel">
-      <p>Letra da música 1 aqui...</p>
-    </div>
-
-    <button class="accordion">Letra da Música 2</button>
-    <div class="panel">
-      <p>Letra da música 2 aqui...</p>
-    </div>
-
-    <button class="accordion">Letra da Música 3</button>
-    <div class="panel">
-      <p>Letra da música 3 aqui...</p>
-    </div>
-
+    <!-- Imagem 1 com texto -->
     <div class="imagem-texto">
       <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto1.jpg" alt="Imagem 1" class="imagem">
       <p>Texto associado à imagem 1.</p>
     </div>
 
+    <!-- Imagem 2 com texto -->
     <div class="imagem-texto">
       <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto2.jpg" alt="Imagem 2" class="imagem">
       <p>Texto associado à imagem 2.</p>
     </div>
 
-  </div>
+    <!-- Imagem 3 com texto -->
+    <div class="imagem-texto">
+      <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto3.jpg" alt="Imagem 3" class="imagem">
+      <p>Texto associado à imagem 3.</p>
+    </div>
 
-  <script>
-    // Script para ativar o accordion
-    var acc = document.getElementsByClassName("accordion");
-    for (var i = 0; i < acc.length; i++) {
-      acc[i].addEventListener("click", function() {
-        this.classList.toggle("active");
-        var panel = this.nextElementSibling;
-        if (panel.style.display === "block") {
-          panel.style.display = "none";
-        } else {
-          panel.style.display = "block";
-        }
-      });
-    }
-  </script>
+    <!-- Imagem 4 com texto -->
+    <div class="imagem-texto">
+      <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto4.jpg" alt="Imagem 4" class="imagem">
+      <p>Texto associado à imagem 4.</p>
+    </div>
+
+    <!-- Imagem 5 com texto -->
+    <div class="imagem-texto">
+      <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto5.jpg" alt="Imagem 5" class="imagem">
+      <p>Texto associado à imagem 5.</p>
+    </div>
+
+    <!-- Imagem 6 com texto -->
+    <div class="imagem-texto">
+      <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto6.jpg" alt="Imagem 6" class="imagem">
+      <p>Texto associado à imagem 6.</p>
+    </div>
+
+    <!-- Imagem 7 com texto -->
+    <div class="imagem-texto">
+      <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto7.jpg" alt="Imagem 7" class="imagem">
+      <p>Texto associado à imagem 7.</p>
+    </div>
+
+    <!-- Imagem 8 com texto -->
+    <div class="imagem-texto">
+      <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto8.jpg" alt="Imagem 8" class="imagem">
+      <p>Texto associado à imagem 8.</p>
+    </div>
+
+    <!-- Imagem 9 com texto -->
+    <div class="imagem-texto">
+      <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto9.jpg" alt="Imagem 9" class="imagem">
+      <p>Texto associado à imagem 9.</p>
+    </div>
+
+    <!-- Imagem 10 com texto -->
+    <div class="imagem-texto">
+      <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto10.jpg" alt="Imagem 10" class="imagem">
+      <p>Texto associado à imagem 10.</p>
+    </div>
+
+  </div>
 </body>
 </html>
