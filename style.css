@@ -40,6 +40,8 @@ p {
   align-items: center;
   margin-bottom: 30px;
   text-align: left;
+  width: 100%; /* Garantir que o contêiner tenha 100% da largura disponível */
+  box-sizing: border-box; /* Para evitar problemas de padding ou margin afetando o layout */
 }
 
 .imagem {
@@ -48,6 +50,7 @@ p {
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   margin-right: 20px;
+  display: block; /* Para garantir que a imagem não tenha espaçamento indesejado */
 }
 
 .texto {
@@ -55,6 +58,7 @@ p {
   color: #333;
   max-width: 600px; /* Limita a largura do texto */
   line-height: 1.4;
+  text-align: left; /* Alinha o texto à esquerda */
 }
 
 @media (min-width: 768px) {
