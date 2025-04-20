@@ -1,66 +1,68 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Eu te amo muito! ❤️</title>
-  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="container">
     <h1>Eu te amo muito! ❤️</h1>
 
-    <div class="gallery">
-      <!-- Repetindo 10 imagens -->
-      <!-- Altere os textos dentro das divs .texto-oculto como quiser -->
-      <div class="card" onclick="mostrarTexto(this)">
-        <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto1.jpg" alt="Foto 1"/>
-        <p class="texto-oculto">Texto da foto 1...</p>
+    <div class="galeria">
+      <!-- Repetir para cada imagem -->
+      <div class="imagem-caixa">
+        <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto1.jpg" alt="Foto 1">
+        <div class="mensagem">Texto para a foto 1</div>
       </div>
-      <div class="card" onclick="mostrarTexto(this)">
-        <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto2.jpg" alt="Foto 2"/>
-        <p class="texto-oculto">Texto da foto 2...</p>
+      <div class="imagem-caixa">
+        <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto2.jpg" alt="Foto 2">
+        <div class="mensagem">Texto para a foto 2</div>
       </div>
-      <div class="card" onclick="mostrarTexto(this)">
-        <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto3.jpg" alt="Foto 3"/>
-        <p class="texto-oculto">Texto da foto 3...</p>
+      <div class="imagem-caixa">
+        <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto3.jpg" alt="Foto 3">
+        <div class="mensagem">Texto para a foto 3</div>
       </div>
-      <div class="card" onclick="mostrarTexto(this)">
-        <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto4.jpg" alt="Foto 4"/>
-        <p class="texto-oculto">Texto da foto 4...</p>
+      <div class="imagem-caixa">
+        <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto4.jpg" alt="Foto 4">
+        <div class="mensagem">Texto para a foto 4</div>
       </div>
-      <div class="card" onclick="mostrarTexto(this)">
-        <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto5.jpg" alt="Foto 5"/>
-        <p class="texto-oculto">Texto da foto 5...</p>
+      <div class="imagem-caixa">
+        <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto5.jpg" alt="Foto 5">
+        <div class="mensagem">Texto para a foto 5</div>
       </div>
-      <div class="card" onclick="mostrarTexto(this)">
-        <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto6.jpg" alt="Foto 6"/>
-        <p class="texto-oculto">Texto da foto 6...</p>
+      <div class="imagem-caixa">
+        <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto6.jpg" alt="Foto 6">
+        <div class="mensagem">Texto para a foto 6</div>
       </div>
-      <div class="card" onclick="mostrarTexto(this)">
-        <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto7.jpg" alt="Foto 7"/>
-        <p class="texto-oculto">Texto da foto 7...</p>
+      <div class="imagem-caixa">
+        <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto7.jpg" alt="Foto 7">
+        <div class="mensagem">Texto para a foto 7</div>
       </div>
-      <div class="card" onclick="mostrarTexto(this)">
-        <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto8.jpg" alt="Foto 8"/>
-        <p class="texto-oculto">Texto da foto 8...</p>
+      <div class="imagem-caixa">
+        <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto8.jpg" alt="Foto 8">
+        <div class="mensagem">Texto para a foto 8</div>
       </div>
-      <div class="card" onclick="mostrarTexto(this)">
-        <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto9.jpg" alt="Foto 9"/>
-        <p class="texto-oculto">Texto da foto 9...</p>
+      <div class="imagem-caixa">
+        <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto9.jpg" alt="Foto 9">
+        <div class="mensagem">Texto para a foto 9</div>
       </div>
-      <div class="card" onclick="mostrarTexto(this)">
-        <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto10.jpg" alt="Foto 10"/>
-        <p class="texto-oculto">Texto da foto 10...</p>
+      <div class="imagem-caixa">
+        <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto10.jpg" alt="Foto 10">
+        <div class="mensagem">Texto para a foto 10</div>
       </div>
     </div>
   </div>
 
   <script>
-    function mostrarTexto(card) {
-      const texto = card.querySelector(".texto-oculto");
-      texto.classList.toggle("mostrar");
-    }
+    const imagens = document.querySelectorAll('.imagem-caixa img');
+    imagens.forEach(imagem => {
+      imagem.addEventListener('click', () => {
+        const msg = imagem.nextElementSibling;
+        msg.style.display = msg.style.display === 'block' ? 'none' : 'block';
+      });
+    });
   </script>
 </body>
 </html>
