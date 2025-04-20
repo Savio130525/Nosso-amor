@@ -1,28 +1,67 @@
-/* Estilo geral para o container */
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  background: linear-gradient(to bottom, #ffe6e6, #fff);
+  color: #333;
+  scroll-behavior: smooth;
+}
+
 .container {
-  width: 80%;
-  margin: 0 auto;
+  max-width: 900px;
+  margin: auto;
+  padding: 30px;
   text-align: center;
 }
 
-/* Estilo para as divs que contêm a imagem e o texto */
-.imagem-texto {
+h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 3rem;
+  color: #c92c5d;
+  margin-bottom: 10px;
+}
+
+.intro {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.texto-grande p {
+  background-color: #fff3f3;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(255, 192, 203, 0.3);
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.galeria {
   display: flex;
-  align-items: center;  /* Alinha a imagem e o texto verticalmente */
+  flex-wrap: wrap;
   justify-content: center;
-  margin-bottom: 30px; /* Espaço entre cada conjunto de imagem e texto */
+  gap: 25px;
+  margin-top: 40px;
 }
 
-/* Estilo para as imagens */
-.imagem {
-  max-width: 40%;  /* Limita a largura da imagem */
-  margin-right: 20px; /* Espaço entre a imagem e o texto */
-  border-radius: 8px;
+.imagem-texto {
+  width: 260px;
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
 }
 
-/* Estilo para o texto */
-.texto {
-  font-size: 18px;
-  color: #333;
-  max-width: 50%; /* Limita a largura do texto */
+.imagem-texto:hover {
+  transform: scale(1.03);
+}
+
+.imagem-texto img {
+  width: 100%;
+  border-radius: 15px;
+  margin-bottom: 10px;
+}
+
+.imagem-texto p {
+  font-style: italic;
+  color: #555;
 }
