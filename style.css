@@ -33,36 +33,33 @@ p {
   margin: 0 auto 30px;
 }
 
-/* Estilo para as imagens e o texto abaixo delas */
+/* Estilo para as imagens e o texto ao lado delas */
 .imagem-texto {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
   margin-bottom: 30px;
-  text-align: center;
+  text-align: left;
 }
 
 .imagem {
-  width: 100%;
-  max-width: 500px;
+  width: 200px; /* Ajusta o tamanho da imagem */
   height: auto;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-right: 20px;
 }
 
 .texto {
   font-size: 1.1rem;
   color: #333;
-  margin-top: 15px;
-  font-style: italic;
+  max-width: 600px; /* Limita a largura do texto */
   line-height: 1.4;
 }
 
 @media (min-width: 768px) {
   .imagem-texto {
-    display: inline-block;
-    width: 48%;
-    margin-right: 4%;
-    margin-bottom: 30px;
-  }
-  .imagem-texto:nth-child(even) {
-    margin-right: 0;
+    justify-content: flex-start;
+    margin-bottom: 40px;
   }
 }
