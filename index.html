@@ -15,44 +15,45 @@
 
     h1 {
       text-align: center;
-      font-size: 32px;
+      font-size: 34px;
       margin: 20px 10px;
       color: #4d3c28;
     }
 
     .container {
-      max-width: 800px;
+      max-width: 1000px;
       margin: 0 auto;
-      padding: 10px;
+      padding: 15px;
     }
 
     .card {
       background-color: #f0e6d6;
+      border: 2px solid #d3bfa6;
       border-radius: 10px;
-      box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.1);
-      margin: 20px 0;
+      box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+      margin: 25px 0;
       overflow: hidden;
     }
 
     .card img {
       width: 100%;
-      height: auto;
+      max-height: 500px;
+      object-fit: cover;
       display: block;
       cursor: pointer;
-      border-bottom: 1px solid #ccc;
     }
 
     .texto-escondido {
-      padding: 15px;
+      padding: 18px;
       font-size: 18px;
       font-style: italic;
       display: none;
+      background-color: #fdf6e3;
     }
 
     @media (min-width: 768px) {
       .card img {
-        max-height: 400px;
-        object-fit: cover;
+        max-height: 550px;
       }
     }
   </style>
@@ -60,24 +61,56 @@
 <body>
   <h1>Eu te amo muito! ❤️</h1>
   <div class="container">
-    
-    <!-- Exemplo de imagem com texto escondido -->
+
     <div class="card">
       <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto1.jpg" onclick="toggleTexto(this)">
-      <div class="texto-escondido">Texto que aparece quando clica na imagem 1.</div>
+      <div class="texto-escondido">Texto da imagem 1</div>
     </div>
 
     <div class="card">
-      <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto2.jpg" onclick="toggleTexto(this)">
-      <div class="texto-escondido">Texto que aparece quando clica na imagem 2.</div>
+      <img src="http://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto2.jpg" onclick="toggleTexto(this)">
+      <div class="texto-escondido">Texto da imagem 2</div>
     </div>
 
     <div class="card">
       <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto3.jpg" onclick="toggleTexto(this)">
-      <div class="texto-escondido">Texto que aparece quando clica na imagem 3.</div>
+      <div class="texto-escondido">Texto da imagem 3</div>
     </div>
 
-    <!-- Pode continuar com as outras imagens aqui... -->
+    <div class="card">
+      <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto4.jpg" onclick="toggleTexto(this)">
+      <div class="texto-escondido">Texto da imagem 4</div>
+    </div>
+
+    <div class="card">
+      <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto5.jpg" onclick="toggleTexto(this)">
+      <div class="texto-escondido">Texto da imagem 5</div>
+    </div>
+
+    <div class="card">
+      <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto6.jpg" onclick="toggleTexto(this)">
+      <div class="texto-escondido">Texto da imagem 6</div>
+    </div>
+
+    <div class="card">
+      <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto7.jpg" onclick="toggleTexto(this)">
+      <div class="texto-escondido">Texto da imagem 7</div>
+    </div>
+
+    <div class="card">
+      <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto8.jpg" onclick="toggleTexto(this)">
+      <div class="texto-escondido">Texto da imagem 8</div>
+    </div>
+
+    <div class="card">
+      <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto9.jpg" onclick="toggleTexto(this)">
+      <div class="texto-escondido">Texto da imagem 9</div>
+    </div>
+
+    <div class="card">
+      <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto10.jpg" onclick="toggleTexto(this)">
+      <div class="texto-escondido">Texto da imagem 10</div>
+    </div>
 
   </div>
 
