@@ -4,120 +4,62 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Eu te amo muito! ❤️</title>
-  <style>
-    body {
-      font-family: 'Georgia', serif;
-      background-color: white;
-      margin: 0;
-      padding: 0;
-      color: #4d3c28;
-    }
-
-    h1 {
-      text-align: center;
-      font-size: 34px;
-      margin: 20px 10px;
-      color: #4d3c28;
-    }
-
-    .container {
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 15px;
-    }
-
-    .card {
-      background-color: #f0e6d6;
-      border: 2px solid #d3bfa6;
-      border-radius: 10px;
-      box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
-      margin: 25px 0;
-      overflow: hidden;
-    }
-
-    .card img {
-      width: 100%;
-      max-height: 500px;
-      object-fit: cover;
-      display: block;
-      cursor: pointer;
-    }
-
-    .texto-escondido {
-      padding: 18px;
-      font-size: 18px;
-      font-style: italic;
-      display: none;
-      background-color: #fdf6e3;
-    }
-
-    @media (min-width: 768px) {
-      .card img {
-        max-height: 550px;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-  <h1>Eu te amo muito! ❤️</h1>
   <div class="container">
+    <h1>Eu te amo muito! ❤️</h1>
 
-    <div class="card">
-      <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto1.jpg" onclick="toggleTexto(this)">
-      <div class="texto-escondido">Texto da imagem 1</div>
+    <div class="gallery">
+      <!-- Repetindo 10 imagens -->
+      <!-- Altere os textos dentro das divs .texto-oculto como quiser -->
+      <div class="card" onclick="mostrarTexto(this)">
+        <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto1.jpg" alt="Foto 1"/>
+        <p class="texto-oculto">Texto da foto 1...</p>
+      </div>
+      <div class="card" onclick="mostrarTexto(this)">
+        <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto2.jpg" alt="Foto 2"/>
+        <p class="texto-oculto">Texto da foto 2...</p>
+      </div>
+      <div class="card" onclick="mostrarTexto(this)">
+        <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto3.jpg" alt="Foto 3"/>
+        <p class="texto-oculto">Texto da foto 3...</p>
+      </div>
+      <div class="card" onclick="mostrarTexto(this)">
+        <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto4.jpg" alt="Foto 4"/>
+        <p class="texto-oculto">Texto da foto 4...</p>
+      </div>
+      <div class="card" onclick="mostrarTexto(this)">
+        <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto5.jpg" alt="Foto 5"/>
+        <p class="texto-oculto">Texto da foto 5...</p>
+      </div>
+      <div class="card" onclick="mostrarTexto(this)">
+        <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto6.jpg" alt="Foto 6"/>
+        <p class="texto-oculto">Texto da foto 6...</p>
+      </div>
+      <div class="card" onclick="mostrarTexto(this)">
+        <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto7.jpg" alt="Foto 7"/>
+        <p class="texto-oculto">Texto da foto 7...</p>
+      </div>
+      <div class="card" onclick="mostrarTexto(this)">
+        <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto8.jpg" alt="Foto 8"/>
+        <p class="texto-oculto">Texto da foto 8...</p>
+      </div>
+      <div class="card" onclick="mostrarTexto(this)">
+        <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto9.jpg" alt="Foto 9"/>
+        <p class="texto-oculto">Texto da foto 9...</p>
+      </div>
+      <div class="card" onclick="mostrarTexto(this)">
+        <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto10.jpg" alt="Foto 10"/>
+        <p class="texto-oculto">Texto da foto 10...</p>
+      </div>
     </div>
-
-    <div class="card">
-      <img src="http://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto2.jpg" onclick="toggleTexto(this)">
-      <div class="texto-escondido">Texto da imagem 2</div>
-    </div>
-
-    <div class="card">
-      <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto3.jpg" onclick="toggleTexto(this)">
-      <div class="texto-escondido">Texto da imagem 3</div>
-    </div>
-
-    <div class="card">
-      <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto4.jpg" onclick="toggleTexto(this)">
-      <div class="texto-escondido">Texto da imagem 4</div>
-    </div>
-
-    <div class="card">
-      <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto5.jpg" onclick="toggleTexto(this)">
-      <div class="texto-escondido">Texto da imagem 5</div>
-    </div>
-
-    <div class="card">
-      <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto6.jpg" onclick="toggleTexto(this)">
-      <div class="texto-escondido">Texto da imagem 6</div>
-    </div>
-
-    <div class="card">
-      <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto7.jpg" onclick="toggleTexto(this)">
-      <div class="texto-escondido">Texto da imagem 7</div>
-    </div>
-
-    <div class="card">
-      <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto8.jpg" onclick="toggleTexto(this)">
-      <div class="texto-escondido">Texto da imagem 8</div>
-    </div>
-
-    <div class="card">
-      <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto9.jpg" onclick="toggleTexto(this)">
-      <div class="texto-escondido">Texto da imagem 9</div>
-    </div>
-
-    <div class="card">
-      <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto10.jpg" onclick="toggleTexto(this)">
-      <div class="texto-escondido">Texto da imagem 10</div>
-    </div>
-
   </div>
 
   <script>
-    function toggleTexto(imagem) {
-      const texto = imagem.nextElementSibling;
-      texto.style.display = texto.style.display === "none" || texto.style.display === "" ? "block" : "none";
+    function mostrarTexto(card) {
+      const texto = card.querySelector(".texto-oculto");
+      texto.classList.toggle("mostrar");
     }
   </script>
 </body>
