@@ -24,12 +24,12 @@
       flex-direction: column;
       gap: 30px;
       width: 90%;
-      max-width: 500px;
+      max-width: 600px;
     }
 
     .card {
       width: 100%;
-      height: 300px;
+      aspect-ratio: 3 / 2;
       perspective: 1000px;
     }
 
@@ -40,18 +40,21 @@
       transform-style: preserve-3d;
       transition: transform 1s;
       cursor: pointer;
+      border-radius: 12px;
     }
 
     .card.flipped .card-inner {
       transform: rotateY(180deg);
     }
 
-    .card-front, .card-back {
+    .card-front,
+    .card-back {
       position: absolute;
       width: 100%;
       height: 100%;
-      border-radius: 10px;
       backface-visibility: hidden;
+      border-radius: 12px;
+      overflow: hidden;
     }
 
     .card-front img {
@@ -59,7 +62,7 @@
       height: 100%;
       object-fit: cover;
       opacity: 0.85;
-      border-radius: 10px;
+      display: block;
     }
 
     .card-back {
@@ -79,46 +82,96 @@
 <body>
   <h1>Eu te amo muito! ❤️</h1>
   <div class="card-container">
-    <!-- Repetindo o bloco abaixo para cada imagem -->
+    <!-- 10 imagens -->
     <div class="card" onclick="this.classList.toggle('flipped')">
       <div class="card-inner">
         <div class="card-front">
-          <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto1.jpg" alt="Foto 1">
+          <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/main/foto1.jpg" alt="Foto 1">
         </div>
-        <div class="card-back">
-          Texto 1 aqui
-        </div>
+        <div class="card-back">Texto 1 aqui</div>
       </div>
     </div>
 
     <div class="card" onclick="this.classList.toggle('flipped')">
       <div class="card-inner">
         <div class="card-front">
-          <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto2.jpg" alt="Foto 2">
+          <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/main/foto2.jpg" alt="Foto 2">
         </div>
-        <div class="card-back">
-          Texto 2 aqui
-        </div>
+        <div class="card-back">Texto 2 aqui</div>
       </div>
     </div>
 
-    <!-- Copie e altere esse bloco para as outras fotos até foto10.jpg -->
     <div class="card" onclick="this.classList.toggle('flipped')">
       <div class="card-inner">
         <div class="card-front">
-          <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto3.jpg" alt="Foto 3">
+          <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/main/foto3.jpg" alt="Foto 3">
         </div>
-        <div class="card-back">
-          Texto 3 aqui
-        </div>
+        <div class="card-back">Texto 3 aqui</div>
       </div>
     </div>
 
-    <!-- Continue até foto10.jpg... -->
+    <div class="card" onclick="this.classList.toggle('flipped')">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/main/foto4.jpg" alt="Foto 4">
+        </div>
+        <div class="card-back">Texto 4 aqui</div>
+      </div>
+    </div>
+
+    <div class="card" onclick="this.classList.toggle('flipped')">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/main/foto5.jpg" alt="Foto 5">
+        </div>
+        <div class="card-back">Texto 5 aqui</div>
+      </div>
+    </div>
+
+    <div class="card" onclick="this.classList.toggle('flipped')">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/main/foto6.jpg" alt="Foto 6">
+        </div>
+        <div class="card-back">Texto 6 aqui</div>
+      </div>
+    </div>
+
+    <div class="card" onclick="this.classList.toggle('flipped')">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/main/foto7.jpg" alt="Foto 7">
+        </div>
+        <div class="card-back">Texto 7 aqui</div>
+      </div>
+    </div>
+
+    <div class="card" onclick="this.classList.toggle('flipped')">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/main/foto8.jpg" alt="Foto 8">
+        </div>
+        <div class="card-back">Texto 8 aqui</div>
+      </div>
+    </div>
+
+    <div class="card" onclick="this.classList.toggle('flipped')">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/main/foto9.jpg" alt="Foto 9">
+        </div>
+        <div class="card-back">Texto 9 aqui</div>
+      </div>
+    </div>
+
+    <div class="card" onclick="this.classList.toggle('flipped')">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/main/foto10.jpg" alt="Foto 10">
+        </div>
+        <div class="card-back">Texto 10 aqui</div>
+      </div>
+    </div>
   </div>
-
-  <script>
-    // Se quiser ativar/desativar por clique em mobile, está pronto!
-  </script>
 </body>
 </html>
