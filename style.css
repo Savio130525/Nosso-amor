@@ -1,0 +1,36 @@
+body {
+  background-color: #ffe6f0;
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  padding: 30px;
+}
+
+h1 {
+  color: #d63384;
+  font-size: 2.5em;
+}
+
+p {
+  font-size: 1.2em;
+  color: #333;
+}
+
+.foto {
+  width: 250px;
+  height: auto;
+  border-radius: 20px;
+  margin-top: 20px;
+}
+
+.mensagem {
+  margin-top: 30px;
+  background-color: #fff0f5;
+  padding: 20px;
+  border-radius: 15px;
+  display: inline-block;
+}
