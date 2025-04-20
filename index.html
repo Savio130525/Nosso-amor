@@ -1,163 +1,91 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Para o Amor da Minha Vida</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Eu te amo muito! ❤️</title>
   <style>
     body {
       font-family: 'Georgia', serif;
-      background-color: white; /* Cor de fundo branca */
-      color: #333; /* Cor do texto normal */
+      background-color: white;
       margin: 0;
       padding: 0;
-    }
-
-    /* Estilo do texto grande com efeito de folha antiga */
-    .texto-grande {
-      font-size: 24px; /* Aumenta o tamanho da fonte */
-      font-weight: bold; /* Deixa o texto mais "gordinho" */
-      text-align: justify;
-      margin-top: 20px;
-      margin-bottom: 20px;
-      padding: 20px;
-      border-radius: 10px;
-      background-color: #f0e6d6; /* Cor de fundo estilo folha antiga */
-      color: #4d3c28; /* Cor do texto para um tom de antigo */
-      font-style: italic; /* Estilo de fonte como se fosse manuscrito */
-      box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
-      max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    /* Estilo das imagens */
-    .imagem {
-      width: 100%;
-      height: auto;
-      max-width: 250px; /* Limita o tamanho máximo das imagens */
-      margin-right: 20px;
-      border-radius: 8px;
-    }
-
-    /* Container das imagens e textos */
-    .imagem-texto {
-      display: flex;
-      align-items: center;
-      margin-bottom: 20px;
-      margin-left: auto;
-      margin-right: auto;
-      max-width: 800px;
-    }
-
-    /* Para garantir que as imagens fiquem à esquerda e o texto à direita */
-    .imagem-texto .imagem {
-      order: 1; /* A imagem ficará à esquerda */
-    }
-
-    /* Para garantir que as imagens fiquem em linha, mas ajustadas ao celular */
-    @media (max-width: 768px) {
-      .imagem-texto {
-        flex-direction: row-reverse; /* No celular, as imagens ficam à esquerda e o texto à direita */
-        align-items: center;
-      }
-
-      .imagem {
-        width: 80%; /* Ajuste da largura das imagens no celular */
-      }
-
-      .texto-musica {
-        font-size: 18px;
-        margin-left: 10px;
-      }
-    }
-
-    /* Estilo do texto da música */
-    .texto-musica {
-      margin-left: 20px;
-      font-size: 20px;
-      font-weight: normal;
-      color: #333;
-      line-height: 1.5;
+      color: #4d3c28;
     }
 
     h1 {
       text-align: center;
-      margin-top: 30px;
-      font-size: 28px;
+      font-size: 32px;
+      margin: 20px 10px;
       color: #4d3c28;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 10px;
+    }
+
+    .card {
+      background-color: #f0e6d6;
+      border-radius: 10px;
+      box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.1);
+      margin: 20px 0;
+      overflow: hidden;
+    }
+
+    .card img {
+      width: 100%;
+      height: auto;
+      display: block;
+      cursor: pointer;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .texto-escondido {
+      padding: 15px;
+      font-size: 18px;
+      font-style: italic;
+      display: none;
+    }
+
+    @media (min-width: 768px) {
+      .card img {
+        max-height: 400px;
+        object-fit: cover;
+      }
     }
   </style>
 </head>
 <body>
+  <h1>Eu te amo muito! ❤️</h1>
   <div class="container">
-    <h1>Para o amor da minha vida❤️</h1>
-
-    <div class="texto-grande">
-      <p>Amor, eu sou o homem mais apaixonado do mundo. Não consigo mais parar de pensar em você. Você virou a trilha sonora da minha vida, trouxe suas cores pro meu mundo, e agora vejo você em todos os lugares. Me imagino com você em cada canto, em cada sonho, em cada plano. Viver a vida ao seu lado foi a melhor escolha que eu já fiz, e vou continuar fazendo essa escolha todos os dias. Vou me casar com você, viver os momentos felizes, os difíceis, todos, sempre ao seu lado. Pode até parecer que sou emocionado demais… mas é que perto de você, é impossível não ser. Durmo pensando em você, acordo com você na mente. Você entrou no meu coração de um jeito que não tem volta, e eu não quero que tenha. Eu não quero só um final feliz com você. Eu quero todos os capítulos. Cada abraço, cada beijo, cada conquista, cada madrugada em claro só conversando ou sonhando juntos. Você é o meu amor, o meu presente e o meu futuro. Eu te amo Ana Alice!</p>
+    
+    <!-- Exemplo de imagem com texto escondido -->
+    <div class="card">
+      <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto1.jpg" onclick="toggleTexto(this)">
+      <div class="texto-escondido">Texto que aparece quando clica na imagem 1.</div>
     </div>
 
-    <!-- Imagem 1 com texto -->
-    <div class="imagem-texto">
-      <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto1.jpg" alt="Imagem 1" class="imagem">
-      <div class="texto-musica">Texto associado à imagem 1.</div>
+    <div class="card">
+      <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto2.jpg" onclick="toggleTexto(this)">
+      <div class="texto-escondido">Texto que aparece quando clica na imagem 2.</div>
     </div>
 
-    <!-- Imagem 2 com texto -->
-    <div class="imagem-texto">
-      <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto2.jpg" alt="Imagem 2" class="imagem">
-      <div class="texto-musica">Texto associado à imagem 2.</div>
+    <div class="card">
+      <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto3.jpg" onclick="toggleTexto(this)">
+      <div class="texto-escondido">Texto que aparece quando clica na imagem 3.</div>
     </div>
 
-    <!-- Imagem 3 com texto -->
-    <div class="imagem-texto">
-      <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto3.jpg" alt="Imagem 3" class="imagem">
-      <div class="texto-musica">Texto associado à imagem 3.</div>
-    </div>
-
-    <!-- Imagem 4 com texto -->
-    <div class="imagem-texto">
-      <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto4.jpg" alt="Imagem 4" class="imagem">
-      <div class="texto-musica">Texto associado à imagem 4.</div>
-    </div>
-
-    <!-- Imagem 5 com texto -->
-    <div class="imagem-texto">
-      <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto5.jpg" alt="Imagem 5" class="imagem">
-      <div class="texto-musica">Texto associado à imagem 5.</div>
-    </div>
-
-    <!-- Imagem 6 com texto -->
-    <div class="imagem-texto">
-      <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto6.jpg" alt="Imagem 6" class="imagem">
-      <div class="texto-musica">Texto associado à imagem 6.</div>
-    </div>
-
-    <!-- Imagem 7 com texto -->
-    <div class="imagem-texto">
-      <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto7.jpg" alt="Imagem 7" class="imagem">
-      <div class="texto-musica">Texto associado à imagem 7.</div>
-    </div>
-
-    <!-- Imagem 8 com texto -->
-    <div class="imagem-texto">
-      <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto8.jpg" alt="Imagem 8" class="imagem">
-      <div class="texto-musica">Texto associado à imagem 8.</div>
-    </div>
-
-    <!-- Imagem 9 com texto -->
-    <div class="imagem-texto">
-      <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto9.jpg" alt="Imagem 9" class="imagem">
-      <div class="texto-musica">Texto associado à imagem 9.</div>
-    </div>
-
-    <!-- Imagem 10 com texto -->
-    <div class="imagem-texto">
-      <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto10.jpg" alt="Imagem 10" class="imagem">
-      <div class="texto-musica">Texto associado à imagem 10.</div>
-    </div>
+    <!-- Pode continuar com as outras imagens aqui... -->
 
   </div>
+
+  <script>
+    function toggleTexto(imagem) {
+      const texto = imagem.nextElementSibling;
+      texto.style.display = texto.style.display === "none" || texto.style.display === "" ? "block" : "none";
+    }
+  </script>
 </body>
 </html>
