@@ -1,52 +1,65 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Eu te amo muito! ❤️</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="container">
     <h1>Eu te amo muito! ❤️</h1>
 
-    <div class="galeria">
-      <!-- Repete para cada imagem -->
-      <div class="card">
-        <div class="card-inner">
-          <div class="card-front">
-            <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/main/foto1.jpg" alt="Foto 1">
-          </div>
-          <div class="card-back">
-            <p>Texto que você vai escrever depois 1</p>
-          </div>
-        </div>
+    <!-- Imagens com texto oculto ao clicar -->
+    <div class="imagens-container">
+      <div class="imagem" onclick="mostrarTexto(1)">
+        <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto1.jpg" alt="Foto 1">
+        <div class="texto oculto" id="texto1">Texto da imagem 1, que você pode adicionar depois!</div>
       </div>
-
-      <div class="card">
-        <div class="card-inner">
-          <div class="card-front">
-            <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/main/foto2.jpg" alt="Foto 2">
-          </div>
-          <div class="card-back">
-            <p>Texto que você vai escrever depois 2</p>
-          </div>
-        </div>
+      <div class="imagem" onclick="mostrarTexto(2)">
+        <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto2.jpg" alt="Foto 2">
+        <div class="texto oculto" id="texto2">Texto da imagem 2, que você pode adicionar depois!</div>
       </div>
-
-      <!-- ... repete até a 10 -->
-      <div class="card">
-        <div class="card-inner">
-          <div class="card-front">
-            <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/main/foto10.jpg" alt="Foto 10">
-          </div>
-          <div class="card-back">
-            <p>Texto que você vai escrever depois 10</p>
-          </div>
-        </div>
+      <div class="imagem" onclick="mostrarTexto(3)">
+        <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto3.jpg" alt="Foto 3">
+        <div class="texto oculto" id="texto3">Texto da imagem 3, que você pode adicionar depois!</div>
       </div>
-
+      <div class="imagem" onclick="mostrarTexto(4)">
+        <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto4.jpg" alt="Foto 4">
+        <div class="texto oculto" id="texto4">Texto da imagem 4, que você pode adicionar depois!</div>
+      </div>
+      <div class="imagem" onclick="mostrarTexto(5)">
+        <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto5.jpg" alt="Foto 5">
+        <div class="texto oculto" id="texto5">Texto da imagem 5, que você pode adicionar depois!</div>
+      </div>
+      <div class="imagem" onclick="mostrarTexto(6)">
+        <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto6.jpg" alt="Foto 6">
+        <div class="texto oculto" id="texto6">Texto da imagem 6, que você pode adicionar depois!</div>
+      </div>
+      <div class="imagem" onclick="mostrarTexto(7)">
+        <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto7.jpg" alt="Foto 7">
+        <div class="texto oculto" id="texto7">Texto da imagem 7, que você pode adicionar depois!</div>
+      </div>
+      <div class="imagem" onclick="mostrarTexto(8)">
+        <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto8.jpg" alt="Foto 8">
+        <div class="texto oculto" id="texto8">Texto da imagem 8, que você pode adicionar depois!</div>
+      </div>
+      <div class="imagem" onclick="mostrarTexto(9)">
+        <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto9.jpg" alt="Foto 9">
+        <div class="texto oculto" id="texto9">Texto da imagem 9, que você pode adicionar depois!</div>
+      </div>
+      <div class="imagem" onclick="mostrarTexto(10)">
+        <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto10.jpg" alt="Foto 10">
+        <div class="texto oculto" id="texto10">Texto da imagem 10, que você pode adicionar depois!</div>
+      </div>
     </div>
   </div>
+
+  <script>
+    function mostrarTexto(num) {
+      var texto = document.getElementById('texto' + num);
+      texto.classList.toggle('oculto');
+    }
+  </script>
 </body>
 </html>
