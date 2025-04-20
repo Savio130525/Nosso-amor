@@ -1,36 +1,28 @@
-body {
-  background-color: #ffe6f0;
-  font-family: 'Arial', sans-serif;
-  text-align: center;
-  margin: 0;
-  padding: 0;
-}
-
+/* Estilo geral para o container */
 .container {
-  padding: 30px;
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
 }
 
-h1 {
-  color: #d63384;
-  font-size: 2.5em;
+/* Estilo para as divs que contêm a imagem e o texto */
+.imagem-texto {
+  display: flex;
+  align-items: center;  /* Alinha a imagem e o texto verticalmente */
+  justify-content: center;
+  margin-bottom: 30px; /* Espaço entre cada conjunto de imagem e texto */
 }
 
-p {
-  font-size: 1.2em;
+/* Estilo para as imagens */
+.imagem {
+  max-width: 40%;  /* Limita a largura da imagem */
+  margin-right: 20px; /* Espaço entre a imagem e o texto */
+  border-radius: 8px;
+}
+
+/* Estilo para o texto */
+.texto {
+  font-size: 18px;
   color: #333;
-}
-
-.foto {
-  width: 250px;
-  height: auto;
-  border-radius: 20px;
-  margin-top: 20px;
-}
-
-.mensagem {
-  margin-top: 30px;
-  background-color: #fff0f5;
-  padding: 20px;
-  border-radius: 15px;
-  display: inline-block;
+  max-width: 50%; /* Limita a largura do texto */
 }
