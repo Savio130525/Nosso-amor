@@ -1,81 +1,54 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <title>Cartões com Foto e Texto</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+body {
+    background-color: #fff8f0;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
 
-    <div class="photo-container">
-        <div class="card">
-            <img src="foto1.jpg" alt="Foto 1" class="photo">
-            <div class="text">Você é uma das pessoas mais especiais que já conheci.</div>
-        </div>
-    </div>
+.photo-container {
+    perspective: 1000px;
+    width: 300px;
+    height: 400px;
+}
 
-    <div class="photo-container">
-        <div class="card">
-            <img src="foto2.jpg" alt="Foto 2" class="photo">
-            <div class="text">Seu sorriso ilumina qualquer ambiente.</div>
-        </div>
-    </div>
+.card {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
 
-    <div class="photo-container">
-        <div class="card">
-            <img src="foto3.jpg" alt="Foto 3" class="photo">
-            <div class="text">Admiro sua força e determinação todos os dias.</div>
-        </div>
-    </div>
+.photo-container:hover .card {
+    transform: rotateY(180deg);
+}
 
-    <div class="photo-container">
-        <div class="card">
-            <img src="foto4.jpg" alt="Foto 4" class="photo">
-            <div class="text">Sua presença faz os momentos simples se tornarem inesquecíveis.</div>
-        </div>
-    </div>
+.photo, .text {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    overflow: hidden;
+}
 
-    <div class="photo-container">
-        <div class="card">
-            <img src="foto5.jpg" alt="Foto 5" class="photo">
-            <div class="text">Obrigada por ser tão você. Isso te torna única.</div>
-        </div>
-    </div>
+.photo {
+    object-fit: cover;
+}
 
-    <div class="photo-container">
-        <div class="card">
-            <img src="foto6.jpg" alt="Foto 6" class="photo">
-            <div class="text">Cada detalhe seu me encanta de um jeito diferente.</div>
-        </div>
-    </div>
-
-    <div class="photo-container">
-        <div class="card">
-            <img src="foto7.jpg" alt="Foto 7" class="photo">
-            <div class="text">Você merece o mundo inteiro e mais um pouco.</div>
-        </div>
-    </div>
-
-    <div class="photo-container">
-        <div class="card">
-            <img src="foto8.jpg" alt="Foto 8" class="photo">
-            <div class="text">É impossível não sorrir quando estou perto de você.</div>
-        </div>
-    </div>
-
-    <div class="photo-container">
-        <div class="card">
-            <img src="foto9.jpg" alt="Foto 9" class="photo">
-            <div class="text">Você é poesia em forma de pessoa.</div>
-        </div>
-    </div>
-
-    <div class="photo-container">
-        <div class="card">
-            <img src="foto10.jpg" alt="Foto 10" class="photo">
-            <div class="text">Que você conquiste tudo o que sonha. Você merece!</div>
-        </div>
-    </div>
-
-</body>
-</html>
+.text {
+    background-color: #f4e1c1;
+    color: #000;
+    transform: rotateY(180deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    font-family: 'Times New Roman', serif;
+    font-size: 1.2em;
+    text-align: justify;
+}
