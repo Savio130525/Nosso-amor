@@ -1,170 +1,79 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eu Te Amo Muito!</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: white;
-            text-align: center;
-            margin: 0;
-            padding: 0;
-        }
-        
-        h1 {
-            color: #D50000;
-            font-size: 3em;
-            margin-top: 20px;
-        }
-
-        .container {
-            display: flex;
-            flex-direction: column; /* Faz as imagens ficarem uma abaixo da outra */
-            align-items: center;
-            padding: 20px;
-        }
-
-        .photo-container {
-            position: relative;
-            margin: 10px;
-            width: 300px; /* Tamanho das imagens ajustado */
-            height: 400px; /* Tamanho das imagens ajustado */
-        }
-
-        .photo {
-            width: 100%;
-            height: 100%;
-            border-radius: 15px;
-            object-fit: cover;
-            transition: transform 0.3s ease-in-out;
-        }
-
-        .text {
-            display: none; /* Esconde o texto inicialmente */
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: rgba(255, 255, 255, 0.9);
-            padding: 15px;
-            border-radius: 8px;
-            width: 80%;
-            text-align: justify;
-            font-family: 'Times New Roman', serif;
-            font-size: 1.2em;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-            z-index: 2; /* Garante que o texto ficará acima da "folha antiga" */
-        }
-
-        .photo-container:hover .text {
-            display: block; /* Exibe o texto quando a imagem for clicada ou estiver com o hover */
-        }
-
-        /* Efeito de mostrar a parte de trás da imagem */
-        .photo-container:hover .photo {
-            opacity: 0.5; /* A foto fica semitransparente */
-        }
-
-        /* Folha antiga atrás do texto */
-        .text::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: #f4e1c1; /* Cor amarelada para imitar uma folha envelhecida */
-            border-radius: 8px;
-            z-index: -1; /* Coloca a "folha" atrás do texto */
-        }
-        
-    </style>
+    <title>Cartões com Foto e Texto</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <h1>Eu te amo muito! ❤️</h1>
-
-    <div class="container">
-        <!-- Exemplo de foto 1 -->
-        <div class="photo-container">
-            <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto1.jpg" alt="Foto 1" class="photo">
-            <div class="text">
-                Tudo ficou mais bonito quando você chegou na minha vida!
-            </div>
+    <div class="photo-container">
+        <div class="card">
+            <img src="foto1.jpg" alt="Foto 1" class="photo">
+            <div class="text">Você é uma das pessoas mais especiais que já conheci.</div>
         </div>
+    </div>
 
-        <!-- Exemplo de foto 2 -->
-        <div class="photo-container">
-            <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto2.jpg" alt="Foto 2" class="photo">
-            <div class="text">
-                 O som da tua risada é minha trilha sonora favorita.
-            </div>
+    <div class="photo-container">
+        <div class="card">
+            <img src="foto2.jpg" alt="Foto 2" class="photo">
+            <div class="text">Seu sorriso ilumina qualquer ambiente.</div>
         </div>
+    </div>
 
-        <!-- Exemplo de foto 3 -->
-        <div class="photo-container">
-            <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto3.jpg" alt="Foto 3" class="photo">
-            <div class="text">
-                Teu sorriso é lindo, e tem o dom de me fazer esquecer qualquer preocupação.
-            </div>
+    <div class="photo-container">
+        <div class="card">
+            <img src="foto3.jpg" alt="Foto 3" class="photo">
+            <div class="text">Admiro sua força e determinação todos os dias.</div>
         </div>
+    </div>
 
-        <!-- Exemplo de foto 4 -->
-        <div class="photo-container">
-            <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto4.jpg" alt="Foto 4" class="photo">
-            <div class="text">
-               Há um silêncio bonito entre nossos beijos, como se o mundo segurasse o fôlego só pra nos ver.
-            </div>
+    <div class="photo-container">
+        <div class="card">
+            <img src="foto4.jpg" alt="Foto 4" class="photo">
+            <div class="text">Sua presença faz os momentos simples se tornarem inesquecíveis.</div>
         </div>
+    </div>
 
-        <!-- Exemplo de foto 5 -->
-        <div class="photo-container">
-            <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto5.jpg" alt="Foto 5" class="photo">
-            <div class="text">
-               Teu olhar encontra o meu e, sem dizer nada, me diz tudo.
-            </div>
+    <div class="photo-container">
+        <div class="card">
+            <img src="foto5.jpg" alt="Foto 5" class="photo">
+            <div class="text">Obrigada por ser tão você. Isso te torna única.</div>
         </div>
+    </div>
 
-        <!-- Exemplo de foto 6 -->
-        <div class="photo-container">
-            <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto6.jpg" alt="Foto 6" class="photo">
-            <div class="text">
-                Você é luz. Daquelas que iluminam sem esforço e aquecem só de estar perto.
-            </div>
+    <div class="photo-container">
+        <div class="card">
+            <img src="foto6.jpg" alt="Foto 6" class="photo">
+            <div class="text">Cada detalhe seu me encanta de um jeito diferente.</div>
         </div>
+    </div>
 
-        <!-- Exemplo de foto 7 -->
-        <div class="photo-container">
-            <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto7.jpg" alt="Foto 7" class="photo">
-            <div class="text">
-                 Entre todos os caminhos, meu coração escolheu ficar no teu.
-            </div>
+    <div class="photo-container">
+        <div class="card">
+            <img src="foto7.jpg" alt="Foto 7" class="photo">
+            <div class="text">Você merece o mundo inteiro e mais um pouco.</div>
         </div>
+    </div>
 
-        <!-- Exemplo de foto 8 -->
-        <div class="photo-container">
-            <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto8.jpg" alt="Foto 8" class="photo">
-            <div class="text">
-                 Junto de ti, até os dias comuns brilham diferente.
-            </div>
+    <div class="photo-container">
+        <div class="card">
+            <img src="foto8.jpg" alt="Foto 8" class="photo">
+            <div class="text">É impossível não sorrir quando estou perto de você.</div>
         </div>
+    </div>
 
-        <!-- Exemplo de foto 9 -->
-        <div class="photo-container">
-            <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto9.jpg" alt="Foto 9" class="photo">
-            <div class="text">
-                Te encontrar foi um daqueles acasos que parecem ter sido escritos com carinho pelo destino.
-            </div>
+    <div class="photo-container">
+        <div class="card">
+            <img src="foto9.jpg" alt="Foto 9" class="photo">
+            <div class="text">Você é poesia em forma de pessoa.</div>
         </div>
+    </div>
 
-        <!-- Exemplo de foto 10 -->
-        <div class="photo-container">
-            <img src="https://raw.githubusercontent.com/Savio130525/Nosso-amor/refs/heads/main/foto10.jpg" alt="Foto 10" class="photo">
-            <div class="text">
-                Com você, tudo faz sentido. E eu só quero continuar colecionando sorrisos do teu lado.
-            </div>
+    <div class="photo-container">
+        <div class="card">
+            <img src="foto10.jpg" alt="Foto 10" class="photo">
+            <div class="text">Que você conquiste tudo o que sonha. Você merece!</div>
         </div>
     </div>
 
